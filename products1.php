@@ -45,6 +45,9 @@
 		}
 		echo "</li>";
 		echo "</ul>";
+
+
+		
 //} 
 	?></div>
 	<h6 class="footer">products</h6>

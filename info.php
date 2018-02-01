@@ -1,4 +1,5 @@
 <?php include './db.php';?>
+<?php include './function_resize.php';?>
 <!DOCTYPE html>
 <html>
 <head>

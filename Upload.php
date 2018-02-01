@@ -13,9 +13,10 @@
 		$extensions_arr = array("jpg","jpeg","png","gif");
 		if(in_array($imageFileType,$extensions_arr) )
 		{
+			move_uploaded_file($_FILES['file']['tmp_name'],$target_dir.$name);
 			$query = "INSERT into IMAGE(image,content) values('".$name."', '".$content."')";
 			$result=mysqli_query($conn,$query);
-			move_uploaded_file($_FILES['file']['tmp_name'],$target_dir.$name);
+			
 			resize("../Students/images/".$name,"../Students/cropimages/".$name,100);
 			resize("../Students/images/".$name,"../Students/displayimages/".$name,550);
 		}
