@@ -24,7 +24,7 @@
   {
     $name=$_POST['uname'];
     $pwd=md5($_POST['pwd']);
-    $query=mysqli_query($conn, "SELECT * FROM Registration_Form WHERE User_Name = '{$name}' ");
+    $query=mysqli_query($conn, "SELECT * FROM Registration_Form WHERE User_Name = '{$name}'");
     while($res=mysqli_fetch_assoc($query))
     {
       $db_password = $res['Password'];
